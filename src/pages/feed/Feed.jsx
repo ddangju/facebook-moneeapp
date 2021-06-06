@@ -5,10 +5,7 @@ import Feedelements from "../../components/feed/Feedelements";
 import "./Feed.scss";
 
 export default class Feed extends Component {
-  state = {
-    data: [],
-    feedData: { img: "/images/feedimg.jpg", feedContent: [] },
-  };
+  state = { data: [], feedData: [] };
 
   handleClick = () => {
     this.setState({
