@@ -1,0 +1,161 @@
+.feedContainer {
+  background-color: #18191a;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  .headerContainer {
+    height: 300px;
+    width: 1000px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    position: relative;
+    .headerCover {
+      height: 100%;
+      width: 100%;
+    }
+    .headerImg {
+      width: 180px;
+      height: 180px;
+      position: absolute;
+      top: 180px;
+      z-index: 100;
+      object-fit: cover;
+      border-radius: 70%;
+    }
+  }
+  .timeLineContainer {
+    // background-color: #242526;
+    margin-top: 100px;
+    width: 500px;
+    .timeLineInput {
+      background-color: #242526;
+      .inputContainer {
+        height: 80px;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        border: none;
+
+        .inputProfile {
+          width: 60px;
+          height: 60px;
+          object-fit: cover;
+          border-radius: 70%;
+        }
+        .inputBox {
+          width: 80%;
+          height: 50px;
+          border-radius: 30px;
+          border: 1px black solid;
+          background-color: #343536;
+          padding-left: 15px;
+          border: none;
+        }
+        .inputBox::placeholder {
+          color: rgba(255, 255, 255, 0.616);
+        }
+      }
+      .inputIconContainer {
+        display: flex;
+        height: 50px;
+        flex-direction: row;
+        justify-content: space-around;
+        border-top: 1px rgba(78, 77, 77, 0.432) solid;
+        .iconBox {
+          display: flex;
+          align-items: center;
+          cursor: pointer;
+          p {
+            color: rgba(255, 255, 255, 0.616);
+          }
+        }
+      }
+    }
+    .timeLineList {
+      background-color: #343536;
+      margin-top: 40px;
+      .timeLineHeader {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        height: 80px;
+        background-color: #343536;
+        .userContainer {
+          display: flex;
+          .userheaderImg {
+            width: 60px;
+            height: 60px;
+            object-fit: cover;
+            border-radius: 70%;
+          }
+          .userInfo {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            padding-left: 10px;
+            color: rgba(255, 255, 255, 0.616);
+            .user {
+              font-size: 17px;
+              font-weight: bolder;
+              margin-bottom: 5px;
+            }
+            .uploadTime {
+              font-size: 13px;
+            }
+          }
+        }
+        .moreBtn {
+          cursor: pointer;
+          margin-right: 20px;
+          color: rgba(255, 255, 255, 0.616);
+        }
+      }
+      .timeLinefeedImg {
+        .feedImg {
+          width: 100%;
+        }
+      }
+      .timeLinefeedIcon {
+        height: 50px;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: center;
+        .btnContainer {
+          color: rgba(255, 255, 255, 0.616);
+        }
+      }
+      .commentContainer {
+        background-color: rgb(255, 255, 255);
+
+        .commentBox {
+          height: auto;
+
+          .add {
+            padding: 10px;
+          }
+        }
+        .commentContents {
+          background-color: olivedrab;
+          display: flex;
+          justify-content: space-around;
+          align-items: center;
+          // margin-top: 20px;
+          .commentImg {
+            width: 40px;
+            height: 30px;
+            object-fit: cover;
+            border-radius: 70%;
+          }
+          .commentInput {
+            width: 60%;
+            height: 20px;
+            border-radius: 30px;
+            border: none;
+          }
+        }
+      }
+    }
+  }
+}
