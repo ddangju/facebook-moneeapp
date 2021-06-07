@@ -5,14 +5,13 @@
   align-items: center;
   .headerContainer {
     height: 300px;
-    width: 1000px;
     display: flex;
     flex-direction: row;
     justify-content: center;
     position: relative;
     .headerCover {
       height: 100%;
-      width: 100%;
+      width: 50%;
     }
     .headerImg {
       width: 180px;
@@ -25,9 +24,7 @@
     }
   }
   .timeLineContainer {
-    width: 500px;
     .timeLineInput {
-      background-color: #242526;
       .inputContainer {
         height: 80px;
         display: flex;
@@ -35,7 +32,6 @@
         align-items: center;
         border: none;
         margin-top: 100px;
-
         .inputProfile {
           width: 60px;
           height: 60px;
@@ -46,12 +42,8 @@
           width: 80%;
           height: 50px;
           border-radius: 30px;
-          background-color: #343536;
           padding-left: 15px;
           border: none;
-        }
-        .inputBox::placeholder {
-          color: rgba(255, 255, 255, 0.616);
         }
       }
       .inputIconContainer {
@@ -64,9 +56,6 @@
           display: flex;
           align-items: center;
           cursor: pointer;
-          p {
-            color: rgba(255, 255, 255, 0.616);
-          }
         }
       }
     }
@@ -83,7 +72,6 @@
           justify-content: space-between;
           align-items: center;
           height: 80px;
-          background-color: #242526;
 
           .userContainer {
             display: flex;
@@ -98,7 +86,6 @@
               flex-direction: column;
               justify-content: center;
               padding-left: 10px;
-              color: rgba(255, 255, 255, 0.616);
               .user {
                 font-size: 17px;
                 font-weight: bolder;
@@ -112,13 +99,10 @@
           .moreBtn {
             cursor: pointer;
             margin-right: 20px;
-            color: rgba(255, 255, 255, 0.616);
           }
         }
         .feedContents {
-          background-color: #242526;
           .addFeed {
-            color: rgba(255, 255, 255, 0.616);
             padding-left: 20px;
           }
           .timeLinefeedImg {
@@ -134,10 +118,6 @@
           justify-content: space-around;
           align-items: center;
           border-top: 1px rgba(78, 77, 77, 0.432) solid;
-          background-color: #343536;
-          .btnContainer {
-            color: rgba(255, 255, 255, 0.616);
-          }
         }
         .commentContainer {
           background-color: rgb(12, 12, 12);
@@ -154,23 +134,17 @@
             }
             .text {
               padding: 20px;
-              color: rgba(255, 255, 255, 0.616);
             }
           }
           .ctnContainer {
             display: flex;
             padding: 10px;
             .commentCnt {
-              color: rgba(255, 255, 255, 0.616);
               font-weight: 900;
-            }
-            p {
-              color: rgba(255, 255, 255, 0.616);
             }
           }
           .commentContents {
             height: 90px;
-            background-color: #242526;
             display: flex;
             justify-content: space-around;
             align-items: center;
@@ -185,11 +159,6 @@
               height: 25px;
               border-radius: 30px;
               border: none;
-              background-color: #343536;
-            }
-
-            .commentInput::placeholder {
-              color: rgba(255, 255, 255, 0.616);
             }
           }
         }
