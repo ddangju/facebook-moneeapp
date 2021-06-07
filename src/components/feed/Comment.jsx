@@ -5,8 +5,7 @@ class Comment extends Component {
     return (
       <>
         <div className="commentBox">
-          <p className="add">하이</p>
-          <p className="add">하이</p>
+          <div className="text"></div>
         </div>
       </>
     );

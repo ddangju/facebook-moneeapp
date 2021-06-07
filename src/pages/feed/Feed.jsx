@@ -5,7 +5,10 @@ import Feedelements from "../../components/feed/Feedelements";
 import "./Feed.scss";
 
 export default class Feed extends Component {
-  state = { data: [], feedData: [] };
+  state = {
+    data: [],
+    feedData: [{ feedContent: "/images/feedImg.jpg" }],
+  };
 
   handleClick = () => {
     this.setState({
@@ -13,10 +16,12 @@ export default class Feed extends Component {
     });
   };
   handleChange = (e) => {
-    this.setState({ data: [e.target.value] });
+    this.setState({ data: { text: e.target.value } });
   };
 
   render() {
+    const { handleChange, handleClick } = this;
+    const { feedData } = this.state;
     return (
       <div className="feedContainer">
         <header className="headerContainer">
@@ -34,9 +39,10 @@ export default class Feed extends Component {
               <input
                 className="inputBox"
                 placeholder="무슨 생각을 하고 게신가요?"
-                onChange={(e) => this.handleChange(e)}
+                type="text"
+                onChange={(e) => handleChange(e)}
               />
-              <button className="post" onClick={this.handleClick}>
+              <button className="post" onClick={handleClick}>
                 게시
               </button>
             </div>
@@ -56,7 +62,15 @@ export default class Feed extends Component {
             </div>
           </article>
           <article className="timeLineList">
-            <Feedelements elements={this.state.feedData} />
+            {feedData.map((item, idx) => {
+              return (
+                <Feedelements
+                  key={idx}
+                  elements={item.text}
+                  FeedImg={item.feedContent}
+                />
+              );
+            })}
           </article>
         </section>
       </div>

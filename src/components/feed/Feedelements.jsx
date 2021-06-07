@@ -6,14 +6,14 @@ import {
 } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import React, { Component } from "react";
+import Feed from "../../pages/feed/Feed";
 import Comment from "./Comment";
 
 class Feedelements extends Component {
   render() {
-    console.log(this.props.elements);
-    const { elements } = this.props;
+    const { elements, FeedImg } = this.props;
     return (
-      <>
+      <div className="timeLine">
         <article className="timeLineHeader">
           <div className="userContainer">
             <img
@@ -28,9 +28,9 @@ class Feedelements extends Component {
           </div>
           <FontAwesomeIcon className="moreBtn" icon={faEllipsisH} size="lg" />
         </article>
-        <div>{elements}</div>
+        <div className="text">{elements}</div>
         <article className="timeLinefeedImg">
-          <img className="feedImg" src="/images/feedimg.jpg" alt="img" />
+          <img className="feedImg" src={FeedImg} />
         </article>
         <article className="timeLinefeedIcon">
           <div className="btnContainer">
@@ -57,11 +57,12 @@ class Feedelements extends Component {
             <input
               className="commentInput"
               placeholder="댓글을 입력하세요..."
+              type="text"
             />
             <button className="addBtn">댓글 달기</button>
           </div>
         </article>
-      </>
+      </div>
     );
   }
 }
