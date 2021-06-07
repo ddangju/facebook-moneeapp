@@ -25,8 +25,6 @@
     }
   }
   .timeLineContainer {
-    // background-color: #242526;
-    margin-top: 100px;
     width: 500px;
     .timeLineInput {
       background-color: #242526;
@@ -36,6 +34,7 @@
         justify-content: space-around;
         align-items: center;
         border: none;
+        margin-top: 100px;
 
         .inputProfile {
           width: 60px;
@@ -47,7 +46,6 @@
           width: 80%;
           height: 50px;
           border-radius: 30px;
-          border: 1px black solid;
           background-color: #343536;
           padding-left: 15px;
           border: none;
@@ -74,85 +72,101 @@
     }
     .timeLineList {
       background-color: #343536;
-      margin-top: 40px;
-      .timeLineHeader {
+      display: flex;
+      flex-direction: column-reverse;
+      .timeLine {
         display: flex;
-        justify-content: space-between;
-        align-items: center;
-        height: 80px;
-        background-color: #343536;
-        .userContainer {
+        flex-direction: column;
+        .timeLineHeader {
           display: flex;
-          .userheaderImg {
-            width: 60px;
-            height: 60px;
-            object-fit: cover;
-            border-radius: 70%;
+          justify-content: space-between;
+          align-items: center;
+          height: 80px;
+          background-color: #242526;
+          .text {
+            color: red;
           }
-          .userInfo {
+          .userContainer {
             display: flex;
-            flex-direction: column;
-            justify-content: center;
-            padding-left: 10px;
+            .userheaderImg {
+              width: 60px;
+              height: 60px;
+              object-fit: cover;
+              border-radius: 70%;
+            }
+            .userInfo {
+              display: flex;
+              flex-direction: column;
+              justify-content: center;
+              padding-left: 10px;
+              color: rgba(255, 255, 255, 0.616);
+              .user {
+                font-size: 17px;
+                font-weight: bolder;
+                margin-bottom: 5px;
+              }
+              .uploadTime {
+                font-size: 13px;
+              }
+            }
+          }
+          .moreBtn {
+            cursor: pointer;
+            margin-right: 20px;
             color: rgba(255, 255, 255, 0.616);
-            .user {
-              font-size: 17px;
-              font-weight: bolder;
-              margin-bottom: 5px;
-            }
-            .uploadTime {
-              font-size: 13px;
-            }
           }
         }
-        .moreBtn {
-          cursor: pointer;
-          margin-right: 20px;
+        .text {
           color: rgba(255, 255, 255, 0.616);
         }
-      }
-      .timeLinefeedImg {
-        .feedImg {
-          width: 100%;
-        }
-      }
-      .timeLinefeedIcon {
-        height: 50px;
-        display: flex;
-        flex-direction: row;
-        justify-content: space-around;
-        align-items: center;
-        .btnContainer {
-          color: rgba(255, 255, 255, 0.616);
-        }
-      }
-      .commentContainer {
-        background-color: rgb(255, 255, 255);
-
-        .commentBox {
-          height: auto;
-
-          .add {
-            padding: 10px;
+        .timeLinefeedImg {
+          .feedImg {
+            width: 100%;
           }
         }
-        .commentContents {
-          background-color: olivedrab;
+        .timeLinefeedIcon {
+          height: 50px;
           display: flex;
+          flex-direction: row;
           justify-content: space-around;
           align-items: center;
-          // margin-top: 20px;
-          .commentImg {
-            width: 40px;
-            height: 30px;
-            object-fit: cover;
-            border-radius: 70%;
+          .btnContainer {
+            color: rgba(255, 255, 255, 0.616);
           }
-          .commentInput {
-            width: 60%;
-            height: 20px;
-            border-radius: 30px;
-            border: none;
+        }
+        .commentContainer {
+          background-color: rgb(255, 255, 255);
+
+          .commentBox {
+            height: auto;
+
+            .add {
+              padding: 10px;
+              background-color: rgb(70, 68, 68);
+            }
+          }
+          .commentContents {
+            height: 60px;
+            background-color: #242526;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            .commentImg {
+              width: 40px;
+              height: 40px;
+              object-fit: cover;
+              border-radius: 70%;
+            }
+            .commentInput {
+              width: 60%;
+              height: 25px;
+              border-radius: 30px;
+              border: none;
+              background-color: #343536;
+            }
+            .commentInput::placeholder {
+              color: rgba(255, 255, 255, 0.616);
+            }
           }
         }
       }
