@@ -3,13 +3,24 @@
 ### 기간 : 2021/6/3 ~ 2021/6/7
 ### 참여자 : 김연주 
 
-### 프로젝트 실행 방법 :  `git clone https://github.com/ddangju/facebook-moneeapp.git -> npm install -> npm start`
+### 프로젝트 실행 방법 
 
-<br>
+1. 터미널에서 
+   `git clone https://github.com/ddangju/facebook-moneeapp.git`
 
-` 로그인 가능한 아이디와 패스워드`
+2. `npm install` 
+
+3. `npm star
+
+
+*브라우저에서 localhost:3000으로 접속*
+
+
+#### > 로그인 가능한 아이디와 패스워드
 - ID : abcde
 - pw : 123456
+
+<br>
 
 ###  프로젝트 목표
 
