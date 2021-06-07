@@ -1,0 +1,31 @@
+:root {
+  --mainColor: #242526;
+  --subColor: #343536;
+  --grayColor: rgba(255, 255, 255, 0.616);
+}
+
+.timeLineInput,
+.timeLineHeader,
+.feedContents,
+.commentContents {
+  background-color: var(--mainColor);
+}
+
+.inputBox,
+.timeLinefeedIcon,
+.commentInput {
+  background-color: var(--subColor);
+}
+
+.inputBox::placeholder,
+.userInfo,
+.moreBtn,
+.addFeed,
+.btnContainer,
+.text,
+.commentCnt,
+.ctnContainer > p,
+.commentInput::placeholder,
+.iconBox > p {
+  color: var(--grayColor);
+}
