@@ -7,10 +7,12 @@
 
 1. 터미널에서 
    `git clone https://github.com/ddangju/facebook-moneeapp.git`
+   
+2. `cd facebook-moneeapp`
 
-2. `npm install` 
+3. `npm install` 
 
-3. `npm start`
+4. `npm start`
 
 
 *브라우저에서 localhost:3000으로 접속*
