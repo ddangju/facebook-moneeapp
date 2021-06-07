@@ -6,7 +6,6 @@ import {
 } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import React, { Component } from "react";
-import Feed from "../../pages/feed/Feed";
 import Comment from "./Comment";
 
 export default class Feedelements extends Component {
@@ -24,7 +23,6 @@ export default class Feedelements extends Component {
 
   render() {
     const { elements, FeedImg } = this.props;
-    console.log(this.state.commentList.length, "gd");
     return (
       <div className="timeLine">
         <article className="timeLineHeader">
@@ -44,7 +42,7 @@ export default class Feedelements extends Component {
         <div className="feedContents">
           <div className="addFeed">{elements}</div>
           <article className="timeLinefeedImg">
-            <img className="feedImg" src={FeedImg} />
+            <img className="feedImg" src={FeedImg} alt="" />
           </article>
         </div>
         <article className="timeLinefeedIcon">

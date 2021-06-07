@@ -1,7 +1,7 @@
 import React from "react";
 import ReactDOM from "react-dom";
 import "./styles/Reset.scss";
-import "./styles/variable.scss";
+import "./styles/Variable.scss";
 import Routes from "./Routes";
 
 ReactDOM.render(
