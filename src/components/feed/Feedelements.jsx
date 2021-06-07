@@ -9,9 +9,22 @@ import React, { Component } from "react";
 import Feed from "../../pages/feed/Feed";
 import Comment from "./Comment";
 
-class Feedelements extends Component {
+export default class Feedelements extends Component {
+  state = { comment: [], commentList: [] };
+
+  addComment = (e) => {
+    this.setState({ comment: { text: e.target.value } });
+  };
+
+  addClick = () => {
+    this.setState({
+      commentList: this.state.commentList.concat(this.state.comment),
+    });
+  };
+
   render() {
     const { elements, FeedImg } = this.props;
+    console.log(this.state.commentList.length, "gd");
     return (
       <div className="timeLine">
         <article className="timeLineHeader">
@@ -28,10 +41,12 @@ class Feedelements extends Component {
           </div>
           <FontAwesomeIcon className="moreBtn" icon={faEllipsisH} size="lg" />
         </article>
-        <div className="text">{elements}</div>
-        <article className="timeLinefeedImg">
-          <img className="feedImg" src={FeedImg} />
-        </article>
+        <div className="feedContents">
+          <div className="addFeed">{elements}</div>
+          <article className="timeLinefeedImg">
+            <img className="feedImg" src={FeedImg} />
+          </article>
+        </div>
         <article className="timeLinefeedIcon">
           <div className="btnContainer">
             <FontAwesomeIcon icon={faThumbsUp} />
@@ -47,7 +62,15 @@ class Feedelements extends Component {
           </div>
         </article>
         <article className="commentContainer">
-          <Comment />
+          {this.state.commentList.map((item, idx) => {
+            return <Comment key={idx} elements={item.text} />;
+          })}
+          <div className="ctnContainer">
+            <p>댓글</p>
+            <p className="commentCnt">{this.state.commentList.length}</p>
+            <p>개</p>
+          </div>
+
           <div className="commentContents">
             <img
               className="commentImg"
@@ -58,13 +81,14 @@ class Feedelements extends Component {
               className="commentInput"
               placeholder="댓글을 입력하세요..."
               type="text"
+              onChange={(e) => this.addComment(e)}
             />
-            <button className="addBtn">댓글 달기</button>
+            <button className="addBtn" onClick={(e) => this.addClick(e)}>
+              댓글 달기
+            </button>
           </div>
         </article>
       </div>
     );
   }
 }
-
-export default Feedelements;

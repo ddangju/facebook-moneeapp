@@ -8,8 +8,8 @@ class Routes extends Component {
     return (
       <>
         <Router>
-          <Route exact path="/login" component={Login} />
-          <Route exact path="/" component={Feed} />
+          <Route exact path="/" component={Login} />
+          <Route exact path="/feed" component={Feed} />
         </Router>
       </>
     );

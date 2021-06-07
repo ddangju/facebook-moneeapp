@@ -71,21 +71,20 @@
       }
     }
     .timeLineList {
-      background-color: #343536;
+      margin-top: 30px;
       display: flex;
       flex-direction: column-reverse;
       .timeLine {
         display: flex;
         flex-direction: column;
+        margin-bottom: 20px;
         .timeLineHeader {
           display: flex;
           justify-content: space-between;
           align-items: center;
           height: 80px;
           background-color: #242526;
-          .text {
-            color: red;
-          }
+
           .userContainer {
             display: flex;
             .userheaderImg {
@@ -116,12 +115,16 @@
             color: rgba(255, 255, 255, 0.616);
           }
         }
-        .text {
-          color: rgba(255, 255, 255, 0.616);
-        }
-        .timeLinefeedImg {
-          .feedImg {
-            width: 100%;
+        .feedContents {
+          background-color: #242526;
+          .addFeed {
+            color: rgba(255, 255, 255, 0.616);
+            padding-left: 20px;
+          }
+          .timeLinefeedImg {
+            .feedImg {
+              width: 100%;
+            }
           }
         }
         .timeLinefeedIcon {
@@ -130,23 +133,43 @@
           flex-direction: row;
           justify-content: space-around;
           align-items: center;
+          border-top: 1px rgba(78, 77, 77, 0.432) solid;
+          background-color: #343536;
           .btnContainer {
             color: rgba(255, 255, 255, 0.616);
           }
         }
         .commentContainer {
-          background-color: rgb(255, 255, 255);
-
+          background-color: rgb(12, 12, 12);
           .commentBox {
             height: auto;
-
-            .add {
-              padding: 10px;
-              background-color: rgb(70, 68, 68);
+            display: flex;
+            align-items: center;
+            padding-left: 10px;
+            .commentImg {
+              width: 40px;
+              height: 40px;
+              object-fit: cover;
+              border-radius: 70%;
+            }
+            .text {
+              padding: 20px;
+              color: rgba(255, 255, 255, 0.616);
+            }
+          }
+          .ctnContainer {
+            display: flex;
+            padding: 10px;
+            .commentCnt {
+              color: rgba(255, 255, 255, 0.616);
+              font-weight: 900;
+            }
+            p {
+              color: rgba(255, 255, 255, 0.616);
             }
           }
           .commentContents {
-            height: 60px;
+            height: 90px;
             background-color: #242526;
             display: flex;
             justify-content: space-around;
@@ -164,6 +187,7 @@
               border: none;
               background-color: #343536;
             }
+
             .commentInput::placeholder {
               color: rgba(255, 255, 255, 0.616);
             }

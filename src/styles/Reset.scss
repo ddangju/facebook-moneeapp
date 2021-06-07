@@ -1,3 +1,12 @@
+* {
+  input:focus {
+    outline: none;
+  }
+  input[type="text"] {
+    color: rgba(255, 255, 255, 0.616);
+  }
+}
+
 html,
 body,
 div,
@@ -87,12 +96,12 @@ video {
   vertical-align: baseline;
   text-decoration: none;
   box-sizing: border-box;
-  input:focus {
-    outline: none;
-  }
-  input[type="text"] {
-    color: rgba(255, 255, 255, 0.616);
-  }
+  // input:focus {
+  //   outline: none;
+  // }
+  // input[type="text"] {
+  //   color: rgba(255, 255, 255, 0.616);
+  // }
 }
 
 /* HTML5 display-role reset for older browsers */
