@@ -1,4 +1,4 @@
-## facebook-moneeapp Project
+# facebook-moneeapp Project
 
 ### 기간 : 2021/6/3 ~ 2021/6/7
 ### 참여자 : 김연주 
@@ -73,7 +73,7 @@
 
 - 반복되는 color값을 따로 variable파일에 분리하여 유지보수가 용이하게 작성하였습니다.
 
-- fontawesome Library를 사용하여 icon를 UI에 활용하였습니다.
+- fontawesome Library를 사용하여 icon을 UI에 활용하였습니다.
 
 
 
