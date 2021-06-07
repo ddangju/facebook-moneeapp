@@ -10,7 +10,7 @@
 
 2. `npm install` 
 
-3. `npm star
+3. `npm start`
 
 
 *브라우저에서 localhost:3000으로 접속*
